@@ -4,7 +4,10 @@ public class ReglasDelJuego {
 	public static Integer jugar(Jugador jugador1, Jugador jugador2) {
 		// Aca escribir toda la logica de como son las reglas
 		// Ejemplo
-		if (jugador1.equals("Piedra") && jugador2.equals("Tijera")) {
+		String jugadaJugador1 = jugador1.obtenerJugada();
+		String jugadaJugador2 = jugador2.obtenerJugada();
+		
+		if (jugadaJugador1.equals("Piedra") && jugadaJugador2.equals("Tijera")) {
 			return 1;
 		}
 		return 0;
