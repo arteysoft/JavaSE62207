@@ -6,7 +6,7 @@ import edu.it.clase7.errores.AVazquezException;
 import edu.it.clase7.errores.CantidadDeDigitosIncorrectaException;
 import edu.it.clase7.errores.DigitosNoNumericosException;
 
-public class EjemploMultiplesExceptions implements Runnable {
+public class EjemploMultiplesExceptions implements Ejecutable {
 	private Boolean esConvertibleAInteger(String str) {
 		try {
 			Integer.parseInt(str);
