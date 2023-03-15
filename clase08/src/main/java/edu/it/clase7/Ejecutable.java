@@ -1,5 +1,7 @@
 package edu.it.clase7;
 
-public interface Ejecutable {
-	void run();
+import java.util.concurrent.Callable;
+
+public interface Ejecutable extends Runnable, Callable<String> {
+	
 }

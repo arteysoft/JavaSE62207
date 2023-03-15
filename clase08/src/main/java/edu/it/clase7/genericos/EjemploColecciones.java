@@ -3,7 +3,9 @@ package edu.it.clase7.genericos;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EjemploColecciones {
+import edu.it.clase7.Ejecutable;
+
+public class EjemploColecciones implements Ejecutable {
 	public void run() {
 		List<Integer> lista = new ArrayList<>();
 		
@@ -17,4 +19,10 @@ public class EjemploColecciones {
 		
 		List listaDeObjetos = new ArrayList();
 	}
+
+	@Override
+	public String call() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}	
 }
