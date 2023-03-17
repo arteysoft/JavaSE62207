@@ -1,0 +1,81 @@
+Los lenguajes de programacion son abstracciones
+
+Dos tipos de abstracciones Sincronica y Asincronica
+
+
+Abstraccion Asincronica
+
+int handler = FileReader.readFile("c:/var/archivos/archivo1", bufferDeMemoria);
+
+if (handler == -1) {
+  aun no se leyo el contenido
+  bufferDeMemoria // ERROR
+}
+if (handler == -1) {
+  aun no se leyo el contenido
+  bufferDeMemoria // ERROR
+}
+if (handler == -1) {
+  aun no se leyo el contenido
+  bufferDeMemoria // ERROR
+}
+if (handler == -1) {
+  aun no se leyo el contenido
+  bufferDeMemoria // ERROR
+}
+if (handler == -1) {
+  aun no se leyo el contenido
+  bufferDeMemoria // ERROR
+}
+if (handler == -1) {
+  aun no se leyo el contenido
+  bufferDeMemoria // ERROR
+}
+if (handler != -1) {
+  bufferDeMemoria // YA LO TENGO CARGADO
+}
+
+
+javascript lo que va a hacer es
+
+readFile("c:/var/archivos/archivo1", (err, bufferDeMemoria) {
+   // aca ya termino de leer
+}
+
+
+Abstraccion Sincronica
+
+String contenido = readFile("c:/var/archivos/archivo1");
+
+
+
+
+La ventaja del asincronico es que puedo hacer muchas cosas al mismo tiempo
+Si quiero hacer varias cosas al mismo tiempo con Sincronico tengo abrir varios hilos
+   * Sincronizar los hilos
+
+
+* ASTERISCO
+
+Cuidado porque con el api de ASYNC AWAIT tampoco podemos hacer muchas cosas en simultaneo
+
+
+
+******************************************************************
+Javascript fue pensado ver eventos del navegador
+
+Android que es java y cada vez que presiono un boton tengo el problema inverso.
+
+Tengo que generar un thread aparte, tengo que hacer lo que dice el boton
+y al final volver al thread principal cuando hubo terminado la consulta.
+
+
+
+
+
+
+
+
+
+
+

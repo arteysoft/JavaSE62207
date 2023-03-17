@@ -27,7 +27,7 @@ public class EjemploNumerosPrimos {
 		}
 		numerosPrimos.add(2L);
 		
-		while (numeroAveriguar > incrementador) {
+		while (numeroAveriguar >= incrementador) {
 			// si incrementador es disivisble por alguno de los numeros que hay en el arrayList ?
 			// NO ES PRIMO
 			// ELSE: ES PRIMO
@@ -38,6 +38,6 @@ public class EjemploNumerosPrimos {
 			incrementador++;
 		}
 
-		return numerosPrimos.contains(incrementador);
+		return numerosPrimos.contains(numeroAveriguar);
 	}
 }

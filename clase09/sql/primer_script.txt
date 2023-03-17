@@ -1,0 +1,23 @@
+CREATE DATABASE JavaSE62207;
+
+USE JavaSE62207;
+
+CREATE TABLE `numeros_primos` (
+  `numero_encontrado` BIGINT NOT NULL,
+PRIMARY KEY (`numero_encontrado`));
+
+
+// Para consultar o query
+SELECT * FROM numeros_primos 
+
+// Para hacer transacciones, vamos a tener INSERT, UPDATE, DELETE
+
+INSERT INTO numeros_primos (numero_encontrado) VALUES (2)
+
+DELETE FROM numeros_primos -- WHERE numero_encontrado = 10
+
+
+INSERT INTO numeros_primos (numero_encontrado) VALUES (10)
+
+UPDATE numeros_primos SET numero_encontrado = 13 WHERE numero_encontrado = 11
+
