@@ -22,44 +22,25 @@ public class FiltroChoferes {
 		return listaAux;
 	}
 	
+	public List<Choffer> obtChoferesConNombreSalvador() {
+		CriterioFiltroChofer crit = c -> c.getNombre().equals("Salvador");
+		return obtChoferesSegunCriterio(crit);
+	}
+	
 	public List<Choffer> obtChoferesLesgustaSuTrabajoSinAccidentes() {
-		var listaAux = new ArrayList<Choffer>();
-		CriterioFiltroChofer criterioFiltro = (Choffer c) -> {
-			if (c.getLeGustaSuTrabajo() && c.getCantidadDeAccidentes() == 0) {
-				return true;
-			}
-			else {
-				return false;
-			}
-		};
-		
+		CriterioFiltroChofer criterioFiltro = c -> (c.getLeGustaSuTrabajo() && c.getCantidadDeAccidentes() == 0);
 		return obtChoferesSegunCriterio(criterioFiltro);
 	}
 	public List<Choffer> obtChoferesNoLesgustaSuTrabajoSinAccidentes() {
-		var listaAux = new ArrayList<Choffer>();
-		for (Choffer c : listChoffer) {
-			if (c.getLeGustaSuTrabajo() == false && c.getCantidadDeAccidentes() == 0) {
-				listaAux.add(c);
-			}
-		}
-		return listaAux;
+		CriterioFiltroChofer criterioFiltro = c -> (c.getLeGustaSuTrabajo() == false && c.getCantidadDeAccidentes() == 0);
+		return obtChoferesSegunCriterio(criterioFiltro);
 	}
 	public List<Choffer> obtChoferesLesgustaSuTrabajoConAccidentes() {
-		var listaAux = new ArrayList<Choffer>();
-		for (Choffer c : listChoffer) {
-			if (c.getLeGustaSuTrabajo() && c.getCantidadDeAccidentes() > 0) {
-				listaAux.add(c);
-			}
-		}
-		return listaAux;
+		CriterioFiltroChofer criterioFiltro = c -> (c.getLeGustaSuTrabajo() && c.getCantidadDeAccidentes() > 0);
+		return obtChoferesSegunCriterio(criterioFiltro);
 	}
 	public List<Choffer> obtChoferesNoLesgustaSuTrabajoConAccidentes() {
-		var listaAux = new ArrayList<Choffer>();
-		for (Choffer c : listChoffer) {
-			if (c.getLeGustaSuTrabajo() == false && c.getCantidadDeAccidentes() > 0) {
-				listaAux.add(c);
-			}
-		}
-		return listaAux;		
+		CriterioFiltroChofer criterioFiltro = c -> (c.getLeGustaSuTrabajo() == false && c.getCantidadDeAccidentes() > 0);
+		return obtChoferesSegunCriterio(criterioFiltro);
 	}
 }

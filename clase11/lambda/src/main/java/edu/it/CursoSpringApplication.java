@@ -34,5 +34,9 @@ public class CursoSpringApplication {
 			System.out.println(c);
 		}
 		System.out.println();
+		for (Choffer c : filtroChoferes.obtChoferesConNombreSalvador()) {
+			System.out.println(c);
+		}
+		System.out.println();
 	}
 }
