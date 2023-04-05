@@ -1,0 +1,70 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>alumnos</servlet-name>
+    <servlet-class>edu.it.controllers.AlumnosController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>inventarAlumno</servlet-name>
+    <servlet-class>edu.it.controllers.InventarAlumnoController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>especificacion1</servlet-name>
+    <servlet-class>edu.it.controllers.PruebaController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>especificacion2</servlet-name>
+    <servlet-class>edu.it.controllers.StateFullController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>especificacion3</servlet-name>
+    <servlet-class>edu.it.controllers.StateLessController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>especificacion4</servlet-name>
+    <servlet-class>edu.it.controllers.GeneracionAlumnoController</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+    <servlet-name>alumnos</servlet-name>
+    <url-pattern>/alumno</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>alumnos</servlet-name>
+    <url-pattern>/alumno/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>especificacion1</servlet-name>
+    <url-pattern>/prueba1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>especificacion2</servlet-name>
+    <url-pattern>/sfull</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>especificacion3</servlet-name>
+    <url-pattern>/sless</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>especificacion4</servlet-name>
+    <url-pattern>/inventaralumno</url-pattern>
+  </servlet-mapping>
+  
+  <!--  -->
+  
+  <servlet-mapping>
+  	<servlet-name>inventarAlumno</servlet-name>
+    <url-pattern>/alumno/inventar</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>inventarAlumno</servlet-name>
+    <url-pattern>/alumno/inventar/*</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
