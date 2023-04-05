@@ -1,0 +1,82 @@
+HTTP Conceptos básicos
+
+Capas de protocolos (Hacemos referencia a la red IP)
+
+
+
+1- Capa fisica
+2- Capa de enlace
+3- Ruteo o IP      Lidiar con las rutas o Routers   
+4- TCP             Lidiar con la organizacion de los paquetes (orden)
+5- HTTP            Protocolo para hacer render de HTML y para consulta y servicio de datos
+                   generalmente los datos van a estar en formato JSON
+
+Client Side Rendering vs Server Side Rendering
+
+
+Client Side Rendering 
+
+
+Cliente -----------------------> HTTP Request -----------------> Servidor
+Cliente <----------------------- HTTP Response <---------------- Servidor
+     
+                          HTML y CSS y Javascript
+
+Cliente -----------------------> HTTP Request -----------------> Servidor
+Cliente <----------------------- HTTP Response <---------------- Servidor
+
+                                  JSON
+
+
+Server Side Rendering
+
+
+Ve a la terminal web como una pantalla boba. Que quiere decir ?
+Solo envia los datos cocinados, para que el browser solo haga el display de esos
+datos.
+
+En sistemas propietarios, tipo CRM Customer Relatioship Managment
+
+
+Protocolo HTTP En si
+
+Request (GET, POST, PUT, DELETE)
+curl -I https://www.ole.com.ar/futbol-primera
+
+GET /futbol-primera HTTP/1.1
+> Host: www.ole.com.ar
+> User-Agent: curl/7.83.1
+
+
+HTTP/1.1 200 OK
+Date: Fri, 31 Mar 2023 21:32:29 GMT
+Content-Type: text/html; charset=utf-8
+Connection: keep-alive
+Vary: Accept-Encoding
+Cache-Control: max-age=120
+X-Powered-By: ASP.NET
+X-AspNet-Version: 4.0.30319
+CF-Cache-Status: HIT
+Age: 188
+Set-Cookie: __cf_bm=Q6M8FwBMxwXGkvWVv52VYy29yY516_AysHEG2MfsgKw-1680298349-0-AR1u+/mMxXfD98UtbordyEUWzjrSXkhdN9RWP216EwyuckF7Or7zlNiF4jBixA1W4nnWS7Z+XyUpQZ1o8/rFDNM=; path=/; expires=Fri, 31-Mar-23 22:02:29 GMT; domain=.ole.com.ar; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 7b0bb489fc52f7d2-EZE
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+-HTML-
+
+
+IIS, NGINX, APACHE  Todos tiene un gateway para realizar paginas dinamicas tanto HTML como JSON sobre todo para php.
+
+El equivalente a este gateway para java se denomina Servlet Container y el que vamos a ver es apache tomcat
+
+Que es un servlet container ???
+
+
+
+
+
+
+
+
+
